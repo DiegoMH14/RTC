@@ -79,8 +79,8 @@ El sitio es 100% estático, así que el despliegue en Vercel no requiere configu
 
 ## Autor
 
-**Marisol** — Desarrolladora y Diseñadora
-Tecnóloga en Análisis y Desarrollo de Software (ADSO), SENA — Montería, Colombia
+**Diego Mendoza Hoyos** — Desarrollador y Diseñador
+Tecnico en Programacion de Software, SENA y Estudiante de Ingeniera de Sistemas — Montería, Colombia
 
 ## Licencia
 
