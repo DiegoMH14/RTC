@@ -2,15 +2,11 @@
 
 **Sitio informativo** de RTC, un sistema de gestión de órdenes de servicio técnico (asignación de técnicos en campo, seguimiento en tiempo real, cobros y garantías digitales), ya construido y en uso real por empresas de mantenimiento, refrigeración y climatización.
 
-🔗 **Ver sitio en vivo:** _(agregar URL de Vercel aquí una vez desplegado)_
+🔗 **Ver sitio en vivo:** https://rtc-web-pi.vercel.app/
 
 > **Nota:** este repositorio contiene únicamente el sitio público informativo/comercial de RTC — donde se explica qué es el producto y cómo funciona. El código de la plataforma real (panel administrativo, backend, lógica de negocio y datos de clientes) es privado y no forma parte de este repositorio.
 
 ---
-
-## Vista previa
-
-_(agregar aquí un screenshot o GIF del sitio una vez esté desplegado)_
 
 ## Sobre RTC
 
