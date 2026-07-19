@@ -1,0 +1,31 @@
+<svg width="220" height="140" viewBox="26 38 220 140" role="img" xmlns="http://www.w3.org/2000/svg">
+  <title>RTC — logo completo (G1)</title>
+
+  <!-- barra lateral de marca -->
+  <rect x="36" y="48" width="6" height="96" fill="#14b8a6">
+    <animate attributeName="opacity" values="1;0.55;1" dur="2.6s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- R -->
+  <text x="60" y="128" font-family="'Arial Black','Impact',sans-serif" font-weight="900"
+    font-size="82" fill="#e2e8f0" text-anchor="start">R</text>
+
+  <!-- T pequeña, para que la palabra RTC se lea completa -->
+  <text x="134" y="126" font-family="'Arial Black','Impact',sans-serif" font-weight="900"
+    font-size="28" fill="#475569" text-anchor="start" opacity="0.85">T</text>
+
+  <!-- pulso: ocupa el lugar de la barra horizontal de la "T" -->
+  <polyline points="132,78 148,78 156,54 168,104 178,64 188,78 200,78"
+    fill="none" stroke="#fef3c7" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"
+    stroke-dasharray="200" stroke-dashoffset="200">
+    <animate attributeName="stroke-dashoffset" from="200" to="0" dur="2s" repeatCount="indefinite"/>
+  </polyline>
+
+  <!-- C -->
+  <text x="182" y="128" font-family="'Arial Black','Impact',sans-serif" font-weight="900"
+    font-size="82" fill="#e2e8f0" text-anchor="start">C</text>
+
+  <!-- wordmark -->
+  <text x="60" y="163" font-family="Arial,sans-serif" font-weight="700" font-size="12"
+    fill="#64748b" text-anchor="start" letter-spacing="3.5">REAL TIME CONTROLS</text>
+</svg>

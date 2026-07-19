@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>RTC — Gestión de servicios técnicos en tiempo real</title>
+<meta name="description" content="RTC centraliza órdenes de servicio, técnicos en campo y pagos de tus clientes en un solo lugar. Software para empresas de refrigeración, aires acondicionados y climatización en Colombia."/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+<link rel="stylesheet" href="landing.css"/>
+</head>
+<body>
+<script>document.documentElement.classList.remove('no-js');</script>
+<noscript><style>.intro-splash{display:none!important}</style></noscript>
+
+<!-- ===================== SPLASH DE ENTRADA (IMPACTO INICIAL) ===================== -->
+<div class="intro-splash" id="introSplash" aria-hidden="true">
+  <div class="intro-glow"></div>
+  <div class="intro-scan"></div>
+  <svg viewBox="26 25 220 155" xmlns="http://www.w3.org/2000/svg" class="intro-logo">
+    <rect class="intro-bar" x="36" y="48" width="6" height="96" fill="#14b8a6"/>
+    <text class="intro-letter intro-r" x="60" y="128" font-family="'Arial Black','Impact',sans-serif" font-weight="900" font-size="82" fill="#e2e8f0" text-anchor="start">R</text>
+    <text class="intro-letter intro-t" x="134" y="126" font-family="'Arial Black','Impact',sans-serif" font-weight="900" font-size="28" fill="#64748b" text-anchor="start">T</text>
+    <polyline class="intro-pulse" points="132,78 148,78 156,54 168,104 178,64 188,78 200,78" fill="none" stroke="#fef3c7" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="200" stroke-dashoffset="200"/>
+    <text class="intro-letter intro-c" x="182" y="128" font-family="'Arial Black','Impact',sans-serif" font-weight="900" font-size="82" fill="#e2e8f0" text-anchor="start">C</text>
+    <text class="intro-word" x="61" y="163" font-family="Arial,sans-serif" font-weight="700" font-size="12" fill="#64748b" text-anchor="start" letter-spacing="3.5">REAL TIME CONTROLS</text>
+  </svg>
+</div>
+
+<div class="grid-bg"></div>
+
+<!-- ============================== NAV ============================== -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-brand">
+      <svg viewBox="26 38 220 140" xmlns="http://www.w3.org/2000/svg" class="brand-logo-full">
+        <rect x="36" y="48" width="6" height="96" fill="#14b8a6"><animate attributeName="opacity" values="1;0.55;1" dur="2.6s" repeatCount="indefinite"/></rect>
+        <text x="60" y="128" font-family="'Arial Black','Impact',sans-serif" font-weight="900" font-size="82" fill="#e2e8f0" text-anchor="start">R</text>
+        <text x="134" y="126" font-family="'Arial Black','Impact',sans-serif" font-weight="900" font-size="28" fill="#475569" text-anchor="start" opacity="0.85">T</text>
+        <polyline points="132,78 148,78 156,54 168,104 178,64 188,78 200,78" fill="none" stroke="#fef3c7" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="200" stroke-dashoffset="200"><animate attributeName="stroke-dashoffset" from="200" to="0" dur="2s" repeatCount="indefinite"/></polyline>
+        <text x="182" y="128" font-family="'Arial Black','Impact',sans-serif" font-weight="900" font-size="82" fill="#e2e8f0" text-anchor="start">C</text>
+        <text x="60" y="163" font-family="Arial,sans-serif" font-weight="700" font-size="12" fill="#64748b" text-anchor="start" letter-spacing="3.5">REAL TIME CONTROLS</text>
+      </svg>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="#problema">El problema</a>
+      <a href="#como-funciona">Cómo funciona</a>
+      <a href="#funciones">Funciones</a>
+      <a href="#roles">Para tu equipo</a>
+      <a href="#demo" class="nav-cta"><i class="fa-solid fa-envelope"></i> Solicitar demo</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</nav>
+
+<!-- ============================== HERO ============================= -->
+<header class="hero" id="top">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <div class="eyebrow hero-anim"><span class="dot"></span> SOFTWARE PARA EMPRESAS DE SERVICIOS TÉCNICOS</div>
+      <h1 class="hero-anim">Tu equipo de técnicos, coordinado en <span class="accent">tiempo real</span>, no en un grupo de WhatsApp.</h1>
+      <p class="hero-sub hero-anim">RTC centraliza tus órdenes de servicio, la ubicación de tus técnicos y los pagos de tus clientes en un solo panel. Pensado para empresas de refrigeración, aires acondicionados y climatización en Colombia.</p>
+      <div class="hero-ctas hero-anim">
+        <a href="#demo" class="btn btn-primary"><i class="fa-solid fa-envelope"></i> Solicitar una demo</a>
+        <a href="#como-funciona" class="btn btn-ghost"><i class="fa-solid fa-play"></i> Ver cómo funciona</a>
+      </div>
+      <div class="hero-trust hero-anim">
+        <span><i class="fa-solid fa-mobile-screen"></i> Funciona desde el celular</span>
+        <span><i class="fa-solid fa-bolt"></i> Sin instalar nada</span>
+        <span><i class="fa-solid fa-map-location-dot"></i> Hecho para trabajo en campo</span>
+      </div>
+    </div>
+
+    <!-- elemento firma: orden en vivo -->
+    <div class="mock">
+      <div class="mock-head">
+        <div class="mock-live"><span class="lv-dot"></span> EN VIVO</div>
+        <div class="mock-id">ORD-0417</div>
+      </div>
+      <div class="mock-card">
+        <div class="mock-row">
+          <div>
+            <div class="mock-title">Reparación de nevera</div>
+            <div class="mock-addr"><i class="fa-solid fa-location-dot" style="color:#475569;margin-right:5px"></i>Cra 4 #52-18, Montería</div>
+          </div>
+          <div class="mock-status" id="mockStatus">PENDIENTE</div>
+        </div>
+        <div class="mock-progress"><i></i><i></i><i></i><i></i></div>
+        <div class="mock-tech">
+          <div class="mock-avatar">JD</div>
+          <div>
+            <div class="mock-tech-name">Jorge Díaz</div>
+            <div class="mock-tech-role">Técnico en refrigeración</div>
+          </div>
+          <div class="mock-time" id="mockTime">hace 0s</div>
+        </div>
+      </div>
+      <div class="mock-below">
+        <div class="mock-chip"><div class="n" data-count style="color:#14b8a6">3</div><div class="l">TÉCNICOS ACTIVOS</div></div>
+        <div class="mock-chip"><div class="n" data-count style="color:#f59e0b">7</div><div class="l">ÓRDENES HOY</div></div>
+        <div class="mock-chip"><div class="n" data-count style="color:#22c55e">100%</div><div class="l">SINCRONIZADO</div></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============================ PROBLEMA ============================ -->
+<section class="pains" id="problema">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-eyebrow mono">EL PROBLEMA</div>
+      <div class="sec-title">¿Te suena familiar?</div>
+      <p class="sec-sub">Si tu empresa presta servicios técnicos, probablemente reconoces alguna de estas tres escenas del día a día.</p>
+    </div>
+    <div class="pain-grid">
+      <div class="pain-card reveal">
+        <div class="pain-icon pain-icon-wa">
+          <span class="wa-ring"></span>
+          <i class="fa-brands fa-whatsapp"></i>
+          <span class="wa-badge wa-badge1">1</span>
+          <span class="wa-badge wa-badge2">2</span>
+          <span class="wa-badge wa-badge3">3</span>
+        </div>
+        <div class="pain-title">Un grupo de WhatsApp como sistema de gestión</div>
+        <div class="pain-desc">Las órdenes se pierden entre audios y confirmaciones sueltas. Nadie tiene claro quién está atendiendo qué, ni en qué va cada servicio.</div>
+      </div>
+      <div class="pain-card reveal">
+        <div class="pain-icon pain-icon-book">
+          <div class="book-spine"></div>
+          <div class="book-page book-lines-a"><span></span><span></span><span></span><span></span></div>
+          <div class="book-page book-lines-b"><span></span><span></span><span></span><span></span></div>
+        </div>
+        <div class="pain-title">El cuaderno de la oficina</div>
+        <div class="pain-desc">Direcciones tachadas, pagos anotados a mano y facturas que nunca cuadran a fin de mes. Todo depende de que nadie pierda una hoja.</div>
+      </div>
+      <div class="pain-card reveal">
+        <div class="pain-icon pain-icon-phone">
+          <span class="phone-ring phone-ring1"></span>
+          <span class="phone-ring phone-ring2"></span>
+          <i class="fa-solid fa-phone-volume"></i>
+        </div>
+        <div class="pain-title">"¿Ya va el técnico?"</div>
+        <div class="pain-desc">Sin manera de mostrarle al cliente en qué va su servicio, cada llamada de seguimiento interrumpe la operación del día.</div>
+      </div>
+    </div>
+    <div class="pains-arrow reveal">Así es como se ve resuelto <i class="fa-solid fa-arrow-down"></i></div>
+  </div>
+</section>
+
+<!-- ========================= CÓMO FUNCIONA ========================== -->
+<section class="how" id="como-funciona">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-eyebrow mono">CÓMO FUNCIONA</div>
+      <div class="sec-title">De la solicitud a la garantía, en cuatro pasos</div>
+      <p class="sec-sub">El mismo flujo, todos los días, sin depender de la memoria de nadie.</p>
+    </div>
+    <div class="how-grid">
+      <div class="how-step reveal">
+        <div class="how-num">1</div>
+        <div class="how-visual">
+          <svg viewBox="0 0 220 84" xmlns="http://www.w3.org/2000/svg" class="hv hv1">
+            <rect x="14" y="10" width="150" height="64" rx="10" fill="#0a1220" stroke="#1e2d45"/>
+            <circle cx="30" cy="20" r="2.4" fill="#334155"/>
+            <circle cx="38" cy="20" r="2.4" fill="#334155"/>
+            <circle cx="46" cy="20" r="2.4" fill="#334155"/>
+            <defs>
+              <clipPath id="hv1clip1"><rect class="hv1-clip hv1-clip1" x="26" y="24" width="0" height="12"/></clipPath>
+              <clipPath id="hv1clip2"><rect class="hv1-clip hv1-clip2" x="26" y="38" width="0" height="12"/></clipPath>
+              <clipPath id="hv1clip3"><rect class="hv1-clip hv1-clip3" x="26" y="52" width="0" height="12"/></clipPath>
+            </defs>
+            <text x="26" y="33" font-family="'IBM Plex Mono',monospace" font-size="9" fill="#5eead4" clip-path="url(#hv1clip1)">Julián Pérez</text>
+            <text x="26" y="47" font-family="'IBM Plex Mono',monospace" font-size="9" fill="#7dd3fc" clip-path="url(#hv1clip2)">Servicio técnico</text>
+            <text x="26" y="61" font-family="'IBM Plex Mono',monospace" font-size="9" fill="#94a3b8" clip-path="url(#hv1clip3)">Mantenimiento PC</text>
+            <rect class="hv1-cursor" x="26" y="24" width="1.6" height="10" fill="#5eead4"/>
+            <circle class="hv1-badge" cx="188" cy="42" r="18" fill="none" stroke="#22c55e" stroke-width="3"/>
+            <path class="hv1-check" d="M180 42 L186 48 L197 35" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="how-title">Se registra el servicio</div>
+        <div class="how-desc">El cliente lo solicita o el administrador lo registra directamente en el panel.</div>
+      </div>
+      <div class="how-step reveal">
+        <div class="how-num">2</div>
+        <div class="how-visual">
+          <svg viewBox="0 0 220 84" xmlns="http://www.w3.org/2000/svg" class="hv hv2">
+            <circle cx="34" cy="42" r="20" fill="#0d1a35" stroke="#1e2d45"/>
+            <text x="34" y="47" font-size="14" text-anchor="middle" font-family="'IBM Plex Mono',monospace" fill="#60a5fa">A</text>
+            <line x1="58" y1="42" x2="162" y2="42" stroke="#1e2d45" stroke-width="2" stroke-dasharray="4 5"/>
+            <circle class="hv2-tech" cx="186" cy="42" r="20" fill="#0d1f10" stroke="#1e2d45"/>
+            <text x="186" y="47" font-size="14" text-anchor="middle" font-family="'IBM Plex Mono',monospace" fill="#4ade80">T</text>
+            <circle class="hv2-dot" cx="58" cy="42" r="5" fill="#f59e0b"/>
+          </svg>
+        </div>
+        <div class="how-title">Se asigna el técnico</div>
+        <div class="how-desc">El admin asigna al técnico disponible. La orden llega al instante a su celular.</div>
+      </div>
+      <div class="how-step reveal">
+        <div class="how-num">3</div>
+        <div class="how-visual">
+          <svg viewBox="0 0 220 84" xmlns="http://www.w3.org/2000/svg" class="hv hv3">
+            <rect x="14" y="14" width="192" height="56" rx="10" fill="#0a1220" stroke="#1e2d45"/>
+            <text class="hv3-s1" x="30" y="36" font-size="11" font-weight="700" font-family="'IBM Plex Mono',monospace" fill="#3b82f6">EN CAMINO</text>
+            <text class="hv3-s2" x="30" y="36" font-size="11" font-weight="700" font-family="'IBM Plex Mono',monospace" fill="#22c55e">COMPLETADA</text>
+            <rect x="30" y="48" width="150" height="6" rx="3" fill="#1e2d45"/>
+            <rect class="hv3-bar" x="30" y="48" width="0" height="6" rx="3" fill="#3b82f6"/>
+          </svg>
+        </div>
+        <div class="how-title">El técnico ejecuta</div>
+        <div class="how-desc">Reporta avances, envía mensajes al cliente y cierra la orden desde su app móvil.</div>
+      </div>
+      <div class="how-step reveal">
+        <div class="how-num">4</div>
+        <div class="how-visual">
+          <svg viewBox="0 0 220 84" xmlns="http://www.w3.org/2000/svg" class="hv hv4">
+            <rect x="14" y="24" width="52" height="34" rx="8" fill="#0a1220" stroke="#38bdf8" stroke-width="2"/>
+            <rect x="22" y="34" width="28" height="5" rx="2" fill="#38bdf8"/>
+            <rect x="22" y="45" width="16" height="4" rx="2" fill="#1e3a5f"/>
+            <path class="hv4-wave hv4-wave1" d="M72 34 Q79 41 72 48" fill="none" stroke="#38bdf8" stroke-width="2.2" stroke-linecap="round"/>
+            <path class="hv4-wave hv4-wave2" d="M78 28 Q89 41 78 54" fill="none" stroke="#38bdf8" stroke-width="2.2" stroke-linecap="round"/>
+            <path class="hv4-wave hv4-wave3" d="M84 22 Q99 41 84 60" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round"/>
+            <circle class="hv4-paycheck" cx="96" cy="41" r="14" fill="none" stroke="#22c55e" stroke-width="3"/>
+            <path class="hv4-paycheck" d="M90 41 L94 46 L103 34" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <path class="hv4-flow" d="M116 41 H158" fill="none" stroke="#fbbf24" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="4 5"/>
+            <path class="hv4-flow-arrow" d="M153 35 L161 41 L153 47" fill="none" stroke="#fbbf24" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path class="hv4-shield" d="M192 15 L209 21 V41 C209 55 201 64 192 69 C183 64 175 55 175 41 V21 Z" fill="#0a1220" stroke="#22c55e" stroke-width="2.4" stroke-dasharray="140" stroke-dashoffset="140"/>
+            <path class="hv4-shieldcheck" d="M184 41 L190 47 L201 33" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="how-title">El cliente paga y descarga su garantía</div>
+        <div class="how-desc">Ve el estado en tiempo real, paga por PSE o efectivo y descarga su certificado de garantía.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================== FUNCIONES ============================ -->
+<section class="features" id="funciones">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-eyebrow mono">FUNCIONES</div>
+      <div class="sec-title">Todo lo que una empresa de servicios técnicos necesita</div>
+      <p class="sec-sub">Un solo sistema para administración, técnicos en campo y clientes.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feat-card reveal">
+        <div class="feat-icon" style="background:#0d2233;color:#14b8a6"><i class="fa-solid fa-clipboard-list"></i></div>
+        <div class="feat-name">Órdenes en tiempo real</div>
+        <div class="feat-desc">Panel centralizado. Filtra por estado, técnico o zona. Cada cambio se refleja al instante en todas las pantallas.</div>
+      </div>
+      <div class="feat-card reveal">
+        <div class="feat-icon" style="background:#0d1f10;color:#4ade80"><i class="fa-solid fa-user-gear"></i></div>
+        <div class="feat-name">Asignación de técnicos</div>
+        <div class="feat-desc">Asigna al técnico disponible al instante. Cada uno recibe sus órdenes en su app móvil sin demora.</div>
+      </div>
+      <div class="feat-card reveal">
+        <div class="feat-icon" style="background:#1a1200;color:#f59e0b"><i class="fa-solid fa-chart-line"></i></div>
+        <div class="feat-name">KPIs y reportes</div>
+        <div class="feat-desc">Métricas de productividad, tiempos de respuesta y satisfacción del cliente en un solo vistazo.</div>
+      </div>
+      <div class="feat-card reveal">
+        <div class="feat-icon" style="background:#0d1a10;color:#34d399"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+        <div class="feat-name">Facturación integrada</div>
+        <div class="feat-desc">Genera facturas digitales por orden de trabajo con un clic, con IVA, método de pago y estado automático.</div>
+      </div>
+      <div class="feat-card reveal">
+        <div class="feat-icon" style="background:#1a1200;color:#fbbf24"><i class="fa-solid fa-bell"></i></div>
+        <div class="feat-name">Notificaciones automáticas</div>
+        <div class="feat-desc">El cliente sigue su servicio en tiempo real: estado, técnico asignado y confirmación de pago.</div>
+      </div>
+      <div class="feat-card reveal">
+        <div class="feat-icon" style="background:#0d1a35;color:#60a5fa"><i class="fa-solid fa-mobile-screen"></i></div>
+        <div class="feat-name">App móvil para técnicos</div>
+        <div class="feat-desc">App de campo: recibe órdenes, envía mensajes al cliente, reporta avances y cierra tickets desde el celular.</div>
+      </div>
+      <div class="feat-card reveal">
+        <div class="feat-icon" style="background:#1a1200;color:#fbbf24"><i class="fa-solid fa-link"></i></div>
+        <div class="feat-name">Acceso sin contraseña para el cliente</div>
+        <div class="feat-desc">Cada cliente recibe un enlace único por WhatsApp o correo para ver y pagar su orden, sin crear cuenta.</div>
+      </div>
+      <div class="feat-card reveal">
+        <div class="feat-icon" style="background:#1a0a0a;color:#f87171"><i class="fa-solid fa-shield-halved"></i></div>
+        <div class="feat-name">Garantías digitales</div>
+        <div class="feat-desc">Certificado de garantía descargable por cada servicio, con control de vigencia y reclamaciones.</div>
+      </div>
+      <div class="feat-card reveal">
+        <div class="feat-icon" style="background:#0a1628;color:#38bdf8"><i class="fa-solid fa-credit-card"></i></div>
+        <div class="feat-name">Pagos por PSE y efectivo</div>
+        <div class="feat-desc">El cliente elige cómo pagar. El registro queda asociado a la orden de forma automática.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= ROLES ============================== -->
+<section class="roles" id="roles">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-eyebrow mono">UN SISTEMA, TRES ROLES</div>
+      <div class="sec-title">Cada quien ve lo que necesita</div>
+      <p class="sec-sub">Administración, técnicos en campo y clientes, sincronizados sobre la misma información.</p>
+    </div>
+    <div class="role-grid">
+      <div class="role-card blue reveal">
+        <div class="role-icon blue"><i class="fa-solid fa-gauge-high"></i></div>
+        <span class="role-tag blue"><i class="fa-solid fa-desktop"></i> Panel web</span>
+        <div class="role-title">Administración</div>
+        <div class="role-desc">El control completo de la operación, pensado para usarse desde computador.</div>
+        <ul class="role-list">
+          <li><i class="fa-solid fa-circle"></i> Crea y asigna órdenes de servicio</li>
+          <li><i class="fa-solid fa-circle"></i> Ve el estado de todos los técnicos</li>
+          <li><i class="fa-solid fa-circle"></i> Genera reportes y facturas</li>
+        </ul>
+      </div>
+      <div class="role-card green reveal">
+        <div class="role-icon green"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+        <span class="role-tag green"><i class="fa-solid fa-mobile-screen"></i> App móvil</span>
+        <div class="role-title">Técnicos en campo</div>
+        <div class="role-desc">Diseñada para el celular, para usarse con las manos ocupadas y poco tiempo.</div>
+        <ul class="role-list">
+          <li><i class="fa-solid fa-circle"></i> Recibe sus órdenes asignadas al instante</li>
+          <li><i class="fa-solid fa-circle"></i> Envía mensajes rápidos al cliente</li>
+          <li><i class="fa-solid fa-circle"></i> Reporta avances y cierra el servicio</li>
+        </ul>
+      </div>
+      <div class="role-card amber reveal">
+        <div class="role-icon amber"><i class="fa-solid fa-link"></i></div>
+        <span class="role-tag amber"><i class="fa-solid fa-shield-halved"></i> Acceso seguro</span>
+        <div class="role-title">Clientes</div>
+        <div class="role-desc">Sin cuenta ni contraseña: un enlace único llega por WhatsApp o correo.</div>
+        <ul class="role-list">
+          <li><i class="fa-solid fa-circle"></i> Ve el estado de su orden en tiempo real</li>
+          <li><i class="fa-solid fa-circle"></i> Paga por PSE o en efectivo al técnico</li>
+          <li><i class="fa-solid fa-circle"></i> Descarga su certificado de garantía</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================== COMPARACIÓN ========================== -->
+<section class="compare">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-eyebrow mono">POR QUÉ CAMBIAR</div>
+      <div class="sec-title">Lo que cambia en el día a día</div>
+    </div>
+    <div class="compare-table reveal">
+      <div class="compare-row head">
+        <div>Proceso</div>
+        <div>Antes</div>
+        <div>Con RTC</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell compare-label">Asignación de técnicos</div>
+        <div class="compare-cell compare-before"><i class="fa-solid fa-xmark"></i>Por llamada o mensaje suelto</div>
+        <div class="compare-cell compare-after"><i class="fa-solid fa-check"></i>Un clic, llega al celular del técnico</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell compare-label">Estado de la orden</div>
+        <div class="compare-cell compare-before"><i class="fa-solid fa-xmark"></i>Solo lo sabe quien la tomó</div>
+        <div class="compare-cell compare-after"><i class="fa-solid fa-check"></i>Visible en tiempo real para todos</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell compare-label">Pagos</div>
+        <div class="compare-cell compare-before"><i class="fa-solid fa-xmark"></i>Anotados a mano, fáciles de perder</div>
+        <div class="compare-cell compare-after"><i class="fa-solid fa-check"></i>Registrados por PSE o efectivo en la orden</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell compare-label">Garantías</div>
+        <div class="compare-cell compare-before"><i class="fa-solid fa-xmark"></i>Papel que el cliente puede extraviar</div>
+        <div class="compare-cell compare-after"><i class="fa-solid fa-check"></i>Certificado digital descargable</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell compare-label">Reportes</div>
+        <div class="compare-cell compare-before"><i class="fa-solid fa-xmark"></i>Armados a mano en Excel, si alcanza el tiempo</div>
+        <div class="compare-cell compare-after"><i class="fa-solid fa-check"></i>Generados automáticamente desde el panel</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= CTA / FORMULARIO DEMO ==================== -->
+<section class="cta-sec" id="demo">
+  <div class="wrap">
+    <div class="cta-box reveal">
+      <div class="cta-grid">
+        <div class="cta-copy">
+          <div class="sec-eyebrow mono">SOLICITAR DEMO</div>
+          <h2>Muéstranos cómo gestionas tus servicios hoy, te mostramos cómo se vería con RTC.</h2>
+          <p>Cuéntanos un poco de tu empresa. Te contactamos para agendar una demo con un caso parecido al de tu operación.</p>
+          <div class="cta-points">
+            <div><i class="fa-solid fa-circle-check"></i> Sin costo ni compromiso</div>
+            <div><i class="fa-solid fa-circle-check"></i> Adaptado a tu tipo de servicio</div>
+            <div><i class="fa-solid fa-circle-check"></i> Te respondemos por correo</div>
+          </div>
+        </div>
+
+        <div>
+          <form class="form-card" id="demoForm">
+            <div class="form-grid" id="demoFormFields">
+              <div class="field">
+                <label for="fNombre">Nombre completo</label>
+                <input type="text" id="fNombre" required placeholder="Tu nombre"/>
+              </div>
+              <div class="field">
+                <label for="fEmpresa">Empresa</label>
+                <input type="text" id="fEmpresa" required placeholder="Nombre de tu empresa"/>
+              </div>
+              <div class="field">
+                <label for="fCiudad">Ciudad</label>
+                <input type="text" id="fCiudad" required placeholder="Ej: Montería"/>
+              </div>
+              <div class="field">
+                <label for="fCorreo">Correo</label>
+                <input type="email" id="fCorreo" required placeholder="tucorreo@empresa.com"/>
+              </div>
+              <div class="field full">
+                <label for="fMensaje">¿Cómo gestionan sus servicios hoy? (opcional)</label>
+                <textarea id="fMensaje" placeholder="Ej: por WhatsApp y un cuaderno en la oficina..."></textarea>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary form-submit"><i class="fa-solid fa-envelope"></i> Enviar solicitud</button>
+            <div class="form-error" id="formError"></div>
+            <div class="form-note">Al enviar, tu solicitud nos llega directo por correo.</div>
+          </form>
+
+          <div class="form-success" id="formSuccess">
+            <i class="fa-solid fa-circle-check"></i>
+            <h3>¡Listo!</h3>
+            <p id="formSuccessMsg">Recibimos tu solicitud. En cuanto la revisemos, te contactamos para agendar tu demo.</p>
+            <button type="button" class="btn btn-ghost form-again" id="formSendAnother"><i class="fa-solid fa-rotate-left"></i> Enviar otra solicitud</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FOOTER =============================== -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <svg viewBox="26 38 220 140" xmlns="http://www.w3.org/2000/svg" class="brand-logo-full">
+          <rect x="36" y="48" width="6" height="96" fill="#14b8a6"><animate attributeName="opacity" values="1;0.55;1" dur="2.6s" repeatCount="indefinite"/></rect>
+          <text x="60" y="128" font-family="'Arial Black','Impact',sans-serif" font-weight="900" font-size="82" fill="#e2e8f0" text-anchor="start">R</text>
+          <text x="134" y="126" font-family="'Arial Black','Impact',sans-serif" font-weight="900" font-size="28" fill="#475569" text-anchor="start" opacity="0.85">T</text>
+          <polyline points="132,78 148,78 156,54 168,104 178,64 188,78 200,78" fill="none" stroke="#fef3c7" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="200" stroke-dashoffset="200"><animate attributeName="stroke-dashoffset" from="200" to="0" dur="2s" repeatCount="indefinite"/></polyline>
+          <text x="182" y="128" font-family="'Arial Black','Impact',sans-serif" font-weight="900" font-size="82" fill="#e2e8f0" text-anchor="start">C</text>
+          <text x="60" y="163" font-family="Arial,sans-serif" font-weight="700" font-size="12" fill="#64748b" text-anchor="start" letter-spacing="3.5">REAL TIME CONTROLS</text>
+        </svg>
+        <div>
+          <div class="footer-brand-tag">Gestión en tiempo real para empresas de servicios técnicos</div>
+        </div>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>PRODUCTO</h4>
+          <a href="#problema">El problema</a>
+          <a href="#como-funciona">Cómo funciona</a>
+          <a href="#funciones">Funciones</a>
+          <a href="#roles">Para tu equipo</a>
+        </div>
+        <div class="footer-col">
+          <h4>CONTACTO</h4>
+          <a href="#demo">Solicitar demo</a>
+          <a href="mailto:contacto@rtc.com.co">contacto@rtc.com.co</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>RTC · Real Controls Time — Montería, Colombia</span>
+      <span>© 2026 RTC DMH. Todos los derechos reservados.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="landing.js"></script>
+</body>
+</html>
