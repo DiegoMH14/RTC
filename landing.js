@@ -58,9 +58,13 @@
       document.body.classList.add('intro-done');
       return;
     }
+    // el splash termina de desvanecerse a los 1750ms (delay) + 700ms (duración) = 2450ms.
+    // el hero solo debe empezar a animarse cuando el splash ya no es visible,
+    // si no, el logo grande del splash queda "fantasma" encima del texto del hero
+    // mientras se desvanece (se notaba sobre todo en móvil).
     window.setTimeout(() => {
       document.body.classList.add('intro-done');
-    }, 1650);
+    }, 2470);
   }
 
   /* ------------------------------------------------------------------------

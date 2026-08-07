@@ -2,11 +2,15 @@
 
 **Sitio informativo** de RTC, un sistema de gestión de órdenes de servicio técnico (asignación de técnicos en campo, seguimiento en tiempo real, cobros y garantías digitales), ya construido y en uso real por empresas de mantenimiento, refrigeración y climatización.
 
-🔗 **Ver sitio en vivo:** https://rtc-web-pi.vercel.app/
+🔗 **Ver sitio en vivo:** _(agregar URL de Netlify aquí una vez desplegado, ej. `https://rtc-landing.netlify.app`)_
 
 > **Nota:** este repositorio contiene únicamente el sitio público informativo/comercial de RTC — donde se explica qué es el producto y cómo funciona. El código de la plataforma real (panel administrativo, backend, lógica de negocio y datos de clientes) es privado y no forma parte de este repositorio.
 
 ---
+
+## Vista previa
+
+_(agregar aquí un screenshot o GIF del sitio una vez esté desplegado)_
 
 ## Sobre RTC
 
@@ -33,7 +37,7 @@ Este sitio explica el flujo completo del producto — **registro del servicio �
 | Formulario  | [EmailJS](https://www.emailjs.com/)           |
 | Tipografía  | IBM Plex Sans / IBM Plex Mono (Google Fonts)  |
 | Íconos      | Font Awesome (CDN)                            |
-| Despliegue  | [Vercel](https://vercel.com/)                 |
+| Despliegue  | [Netlify](https://www.netlify.com/)           |
 
 ## Estructura del proyecto
 
@@ -42,6 +46,7 @@ rtc-landing/
 ├── index.html             # Estructura y contenido de la página
 ├── landing.css             # Estilos (variables, secciones, animaciones)
 ├── landing.js               # Comportamiento (mockup, formulario, scroll reveal)
+├── netlify.toml             # Configuración de despliegue y headers para Netlify
 └── assets/
     └── logo-rtc-nuevo.svg  # Isotipo del logo
 ```
@@ -68,19 +73,34 @@ El formulario usa EmailJS para enviar correos directamente desde el navegador. P
 
 > Por seguridad, este repositorio público no incluye credenciales reales.
 
-## Despliegue en Vercel
+## Despliegue en Netlify
 
-El sitio es 100% estático, así que el despliegue en Vercel no requiere configuración adicional:
+El sitio es 100% estático (sin build), así que el despliegue en Netlify no requiere configuración adicional — ya incluye un [`netlify.toml`](./netlify.toml) con la publicación y los headers de seguridad/caché listos.
 
-1. Importa el repositorio desde [vercel.com/new](https://vercel.com/new).
-2. Framework Preset: **Other** (sitio estático).
-3. Deja el *Build Command* y el *Output Directory* vacíos — Vercel sirve los archivos tal cual.
-4. Deploy.
+**Opción A — Desde la web de Netlify (recomendada):**
+
+1. Entra a [app.netlify.com](https://app.netlify.com/) → **Add new site → Import an existing project**.
+2. Conecta tu cuenta de GitHub y selecciona el repositorio `rtc-landing`.
+3. Netlify detecta automáticamente el `netlify.toml`:
+   - **Build command:** _(vacío)_
+   - **Publish directory:** `.`
+4. **Deploy site**. En 1-2 minutos queda publicado en una URL tipo `https://<nombre-random>.netlify.app`.
+5. Opcional: en **Site configuration → Domain management**, cambia el subdominio (ej. `rtc-landing.netlify.app`) o conecta un dominio propio.
+
+Cada `git push` a `main` vuelve a desplegar el sitio automáticamente.
+
+**Opción B — Desde la terminal (Netlify CLI):**
+
+```bash
+npm install -g netlify-cli
+netlify login
+netlify deploy --prod
+```
 
 ## Autor
 
-**Diego Mendoza Hoyos** — Desarrollador y Diseñador
-Tecnico en Programacion de Software, SENA y Estudiante de Ingeniera de Sistemas — Montería, Colombia
+**Marisol** — Desarrolladora y Diseñadora
+Tecnóloga en Análisis y Desarrollo de Software (ADSO), SENA — Montería, Colombia
 
 ## Licencia
 
